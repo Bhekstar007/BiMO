@@ -31,6 +31,7 @@ $sql = "CREATE TABLE IF NOT EXISTS client_data (
     company VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     phone_number VARCHAR(20) NOT NULL,
+    company_address VARCHAR(200) NOT NULL,
     project_id VARCHAR(50) NOT NULL
 )";
 
