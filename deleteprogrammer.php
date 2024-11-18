@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 if (isset($_GET['id_number'])) {
-    $id = $_GET['id_number'];
+    $id_number = $_GET['id_number'];
     $sql = "DELETE FROM programmers WHERE id_number = $id_number";
 
     if ($conn->query($sql) === TRUE) {
