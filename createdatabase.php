@@ -43,6 +43,12 @@ $sql_2 = "CREATE TABLE programmers (
     password varchar(255),
 )";
 
+$sql_3 = "CREATE TABLE documents (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    file_name VARCHAR(255) NOT NULL,
+    upload_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+
 if ($conn->query($sql) === TRUE) {
     echo "Table 'client_data' created successfully or already exists.";
 } else {
@@ -55,6 +61,11 @@ if ($conn->query($sql_2) === TRUE) {
     echo "Error creating table: " . $conn->error;
 }
 
+if ($conn->query($sql_3) === TRUE) {
+    echo "Table 'documents' created successfully or already exists.";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
 // Close the connection
 $conn->close();
 ?>
