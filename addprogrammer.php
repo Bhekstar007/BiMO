@@ -18,7 +18,8 @@ if ($conn->connect_error) {
     <title>Add Programmer</title>
 </head>
 <body>
-    <form method="POST" action="add_programmer.php">
+    <a href="viewprogrammer.php">View</a>
+    <form method="POST" action="addprogrammer.php">
         <label>Name: <input type="text" name="name" required></label><br>
         <label>ID Number: <input type="text" name="id_number" required></label><br>
         <label>Email: <input type="email" name="email" required></label><br>

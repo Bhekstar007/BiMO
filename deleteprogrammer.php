@@ -3,23 +3,24 @@ $servername = "localhost";
 $username = "root";
 $password = ""; // Replace with your database password
 $dbname = "waste_management";
-
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
 
-if (isset($_GET['id_number'])) {
-    $id_number = $_GET['id_number'];
-    $sql = "DELETE FROM programmers WHERE id_number = $id_number";
+    // Prepared statement to prevent SQL injection, id_number is treated as a string
+    $stmt = $conn->prepare("DELETE FROM programmers WHERE id_number = ?");
+    $stmt->bind_param("s", $id); // 's' denotes a string parameter
 
-    if ($conn->query($sql) === TRUE) {
-        header("Location: viewprogrammers.php");
+    if ($stmt->execute()) {
+        header("Location: viewprogrammer.php");
+        exit();
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
+} else {
+    echo "No ID provided.";
 }
 ?>
+
+

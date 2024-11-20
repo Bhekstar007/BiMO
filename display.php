@@ -27,6 +27,7 @@ $result = $conn->query($sql);
 </head>
 <body>
     <h2>Submitted Client Information</h2>
+    <a href='clientform.php'>Client Form</a>
     <table border="1">
         <tr>
             <th>Name</th>
