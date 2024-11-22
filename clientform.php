@@ -7,6 +7,7 @@
     <title>Client Information Form</title>
 </head>
 <body>
+<a href='display.php'>Back</a>
     <h2>Client Information Form</h2>
     <form action="submit.php" method="POST">
         <label for="name">Name:</label>
