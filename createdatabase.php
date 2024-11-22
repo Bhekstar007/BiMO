@@ -41,7 +41,7 @@ if ($conn->query($sql) === TRUE) {
     echo "Error creating table: " . $conn->error;
 }
 
-$sql_2 = "CREATE TABLE programmers (
+$sql_2 = "CREATE TABLE IF NOT EXISTS programmers (
     id_number VARCHAR (255) PRIMARY KEY UNIQUE,
     name VARCHAR(255) NOT NULL,
     phone_number VARCHAR(100),
@@ -55,7 +55,7 @@ if ($conn->query($sql_2) === TRUE) {
     echo "Error creating table: " . $conn->error;
 }
 
-$sql_3 = "CREATE TABLE documents (
+$sql_3 = "CREATE TABLE IF NOT EXISTS documents (
     id INT AUTO_INCREMENT PRIMARY KEY,
     file_name VARCHAR(255) NOT NULL,
     upload_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
