@@ -20,14 +20,15 @@ if (isset($_POST['upload'])) {
     }
 
     // File info
-    $fileName = basename($_FILES["file"]["name"]);
+    $fileName = preg_replace('/[^A-Za-z0-9.\-_]/', '_', basename($_FILES["file"]["name"])); // Sanitize file name
     $targetFilePath = $targetDir . $fileName;
 
     // Move uploaded file to the target directory
     if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)) {
-        // Insert file info into the database
+        // Save the directory and file name in the database
+        $relativePath = $targetDir . $fileName; // Include directory in file path
         $stmt = $pdo->prepare("INSERT INTO documents (file_name) VALUES (:fileName)");
-        $stmt->bindParam(':fileName', $fileName);
+        $stmt->bindParam(':fileName', $relativePath);
 
         if ($stmt->execute()) {
             echo "The file $fileName has been uploaded successfully.";
