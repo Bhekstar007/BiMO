@@ -11,6 +11,16 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+if (empty($_POST["id_number"])) {// Staff ID validation process
+	$IDErr = "<p style='color:red;'>ID number is required</p>";
+	}else{
+		$id_number = $_POST["id_number"];
+		if(!preg_match('/^SS+\d\d\d\d*$/',$id_number) and strlen($id_number)!=6){
+			$IDErr = "<p style='color:red;'>ID number should start with SS followed by the number</p>";
+		}
+	
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,13 +58,4 @@ if (isset($_POST['submit'])) {
     }
 }
 
-if (empty($_POST["id_number"])) {// Staff ID validation process
-	$IDErr = "<p style='color:red;'>ID number is required</p>";
-	}else{
-		$id_number = $_POST["id_number"];
-		if(!preg_match('/^SS+\d\d\d\d*$/',$id_number) and strlen($id_number)!=6){
-			$IDErr = "<p style='color:red;'>ID number should start with SS followed by the number</p>";
-		}
-	
-	}
 ?>
