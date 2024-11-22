@@ -26,6 +26,14 @@ $result = $conn->query($sql);
     <title>Submitted Client Information</title>
 </head>
 <body>
+<nav>
+    <a href="index.php">Home</a>
+    <a href="viewprogrammer.php">Programmer Manager</a>
+    <a href="display.php">Client Details</a>
+    <a href="displayfiles.php">Files</a>
+    <a href="createdatabase.php">Create Database</a>
+    <a href="deletedatabase.php">Delete Database</a>
+</nav>
     <h2>Submitted Client Information</h2>
     <a href='clientform.php'>Client Form</a>
     <table border="1">

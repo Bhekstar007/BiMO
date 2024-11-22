@@ -31,11 +31,14 @@ if (isset($_POST['upload'])) {
         $stmt->bindParam(':fileName', $relativePath);
 
         if ($stmt->execute()) {
+            echo "<a href='displayfiles.php'>Back to Files</a>";
             echo "The file $fileName has been uploaded successfully.";
         } else {
+            echo "<a href='displayfiles.php'>Back to Files</a>";
             echo "Failed to save file metadata in the database.";
         }
     } else {
+        echo "<a href='displayfiles.php'>Back to Files</a>";
         echo "Failed to upload the file.";
     }
 }

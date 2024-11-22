@@ -20,6 +20,7 @@ if ($conn->connect_error) {
     <title>Upload File</title>
 </head>
 <body>
+<a href="displayfiles.php">Back to Uploaded Files</a>
     <form action="upload.php" method="post" enctype="multipart/form-data">
         <label for="file">Choose a file to upload:</label>
         <input type="file" name="file" id="file" required>
