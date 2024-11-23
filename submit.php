@@ -27,7 +27,7 @@ $sql = "INSERT INTO client_data (name, company, email, phone_number, company_add
         VALUES ('$name', '$company', '$email', '$phone', '$compadd', '$project_id')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Data submitted successfully! <a href='display.php'>View all submissions</a>";
+    echo "Data submitted successfully!<a href='display.php'>View all submissions</a>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

@@ -40,14 +40,14 @@ if (isset($_GET['id'])) {
 }
 
 if (isset($_POST['update'])) {
-    $id_number = intval($_POST['id_number']); // Sanitize input
+    $id_number = $conn->real_escape_string($_POST['id_number']); // Treat as a string
     $name = $conn->real_escape_string($_POST['name']);
     $email = $conn->real_escape_string($_POST['email']);
     $pwd = !empty($_POST['password']) ? password_hash($_POST['password'], PASSWORD_BCRYPT) : $programmer['password']; // Update only if provided
     $phone_number = $conn->real_escape_string($_POST['phone_number']);
 
     $stmt = $conn->prepare("UPDATE programmers SET name = ?, email = ?, password = ?, phone_number = ? WHERE id_number = ?");
-    $stmt->bind_param("ssssi", $name, $email, $pwd, $phone_number, $id_number);
+    $stmt->bind_param("sssss", $name, $email, $pwd, $phone_number, $id_number);
 
     if ($stmt->execute()) {
         header("Location: viewprogrammer.php");
