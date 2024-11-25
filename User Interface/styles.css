@@ -185,6 +185,243 @@ button:hover {
     background-color: #303f9f;
 }
 
+/* Admin Page Styles */
+#admin-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#admin-functions {
+    margin-bottom: 20px;
+}
+
+#admin-functions h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#admin-functions ul {
+    list-style: none;
+    padding: 0;
+}
+
+#admin-functions ul li {
+    margin: 10px 0;
+}
+
+#admin-functions ul li a {
+    color: #3f51b5;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+#admin-functions ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Page specific content styles */
+#addprogrammer-container, #viewprogrammer-container, #addclient-container, #viewclients-container, #uploadfiles-container, #managefiles-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#addprogrammer-container h2, #viewprogrammer-container h2, #addclient-container h2, #viewclients-container h2, #uploadfiles-container h2, #managefiles-container h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#addprogrammer-container form, #addclient-container form, #uploadfiles-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+#addprogrammer-container input, #addclient-container input, #uploadfiles-container input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#addprogrammer-container button, #addclient-container button, #uploadfiles-container button {
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addprogrammer-container button:hover, #addclient-container button:hover, #uploadfiles-container button:hover {
+    background-color: #303f9f;
+}
+
+/* Hide/show page styles */
+.page {
+    display: none;
+}
+
+.page.show {
+    display: block;
+}
+
+
+
+#editprogrammer-container input[type="text"],
+#editprogrammer-container input[type="email"],
+#editprogrammer-container input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#editprogrammer-container button {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#editprogrammer-container button:hover {
+    background-color: #218838;
+}
+
+/* Delete Programmer Section Styles */
+#deleteprogrammer-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#deleteprogrammer-container h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#deleteprogrammer-container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#deleteprogrammer-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+#deleteprogrammer-container input[type="text"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#deleteprogrammer-container button {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #dc3545;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#deleteprogrammer-container button:hover {
+    background-color: #c82333;
+}
+
+/* Common Container Styles for Add, View, Edit, Delete Programmer */
+#addprogrammer-container,
+#viewprogrammer-container,
+#editprogrammer-container,
+#deleteprogrammer-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#addprogrammer-container h2,
+#viewprogrammer-container h2,
+#editprogrammer-container h2,
+#deleteprogrammer-container h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+#addprogrammer-container form,
+#viewprogrammer-container form,
+#editprogrammer-container form,
+#deleteprogrammer-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+#addprogrammer-container input,
+#viewprogrammer-container input,
+#editprogrammer-container input,
+#deleteprogrammer-container input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#addprogrammer-container button,
+#viewprogrammer-container button,
+#editprogrammer-container button,
+#deleteprogrammer-container button {
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addprogrammer-container button:hover,
+#viewprogrammer-container button:hover,
+#editprogrammer-container button:hover,
+#deleteprogrammer-container button:hover {
+    background-color: #303f9f;
+}
+
+/* Specific Styles for Delete Programmer */
+#deleteprogrammer-container button {
+    background-color: #dc3545;
+}
+
+#deleteprogrammer-container button:hover {
+    background-color: #c82333;
+}
+
+
+/* Additional styles for messages and inputs, similar to previous example */
+
+
+
 
 
 /* Additional styles for messages and inputs, similar to previous example */
