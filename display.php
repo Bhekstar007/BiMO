@@ -24,6 +24,8 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submitted Client Information</title>
+    <link rel="stylesheet" href="userinterface/styles.css">
+    <script src="userinterface/scripts.js"></script>
 </head>
 <body>
 <nav>

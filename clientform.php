@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Information Form</title>
+    <link rel="stylesheet" href="userinterface/styles.css">
+    <script src="userinterface/scripts.js"></script>
 </head>
 <body>
 <a href='display.php'>Back</a>

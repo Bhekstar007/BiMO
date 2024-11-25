@@ -68,6 +68,8 @@ $files = $stmt->fetchAll(PDO::FETCH_ASSOC);
             background-color: #f4f4f4;
         }
     </style>
+    <link rel="stylesheet" href="userinterface/styles.css">
+    <script src="userinterface/scripts.js"></script>
 </head>
 <body>
 <nav>

@@ -65,6 +65,8 @@ $conn->close();
 <html lang="en">
 <head>
     <title>Edit Programmer</title>
+    <link rel="stylesheet" href="userinterface/styles.css">
+    <script src="userinterface/scripts.js"></script>
 </head>
 <body>
     <?php if ($programmer): ?>
