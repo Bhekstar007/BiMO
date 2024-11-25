@@ -13,6 +13,12 @@
             <li><a href="#" onclick="showPage('chatbot')">Chatbot</a></li>
             <li><a href="#" onclick="showPage('history')">History</a></li>
             <li><a href="#" onclick="showPage('report')">Report</a></li>
+
+            <!-- Admin Sidebar -->
+            <div class="admin-section">
+                <h3>Admin</h3>
+                <li><a href="#" onclick="showPage('admin')">Admin Dashboard</a></li>
+            </div>
         </ul>
     </div>
     
@@ -27,37 +33,119 @@
                 </div>
             </div>
         </div>
-        
+
         <div id="content">
             <!-- Chatbot Content -->
-			<div class="chat-container">
-            <div id="chatbot-container" class="page">
-			
-                <div id="chat-window">
-                    <div id="chat-header">
-                        <h2>Chatbot Assistant</h2>
-                    </div>
-                    <div id="chat-messages"></div>
-                    <div id="user-input">
-                        <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off">
-                        <button id="send-button">Send</button>
+            <div class="chat-container">
+                <div id="chatbot-container" class="page">
+                    <div id="chat-window">
+                        <div id="chat-header">
+                            <h2>Chatbot Assistant</h2>
+                        </div>
+                        <div id="chat-messages"></div>
+                        <div id="user-input">
+                            <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off">
+                            <button id="send-button">Send</button>
+                        </div>
                     </div>
                 </div>
             </div>
-			</div>
-			
-		
 
-            <!-- History Content -->
-            <div id="history-container" class="page" style="display: none;">
-                <h2>History</h2>
-                <p>This is the history page content.</p>
-            </div>
+        <!-- History Content -->
+        <div id="history-container" class="page" style="display: none;">
+            <h2>History</h2>
+            <p>This is the history page content.</p>
+        </div>
 
-            <!-- Report Content -->
-            <div id="report-container" class="page" style="display: none;">
-                <h2>Report</h2>
-                <p>This is the report page content.</p>
+        <!-- Report Content -->
+        <div id="report-container" class="page" style="display: none;">
+            <h2>Report</h2>
+            <p>This is the report page content.</p>
+        </div>
+        
+        <div id="content">
+            <!-- Admin Dashboard Content -->
+            <div id="admin-container" class="page" style="display: none;">
+                <h2>Admin Dashboard</h2>
+                
+                <div id="admin-functions">
+                    <h3>Manage Programmers</h3>
+                    <ul>
+                        <li><a href="#" onclick="showSubPage('addprogrammer')">Add Programmer</a></li>
+                        <li><a href="#" onclick="showSubPage('viewprogrammer')">View Programmers</a></li>
+                        <li><a href="#" onclick="showSubPage('editprogrammer')">Edit Programmers</a></li>
+                        <li><a href="#" onclick="showSubPage('deleteprogrammer')">Delete Programmers</a></li>
+                    </ul>
+                    
+                    <h3>Manage Clients</h3>
+                    <ul>
+                        <li><a href="#" onclick="showSubPage('addclient')">Add Client</a></li>
+                        <li><a href="#" onclick="showSubPage('viewclients')">View Clients</a></li>
+                    </ul>
+                    
+                    <h3>File Management</h3>
+                    <ul>
+                        <li><a href="#" onclick="showSubPage('uploadfiles')">Upload Files</a></li>
+                        <li><a href="#" onclick="showSubPage('managefiles')">Manage Files</a></li>
+                    </ul>
+                </div>
+
+                <!-- The content of the selected subpage will appear here -->
+                <!-- Add Programmer Content -->
+                <div id="addprogrammer-container" class="page" style="display: none;">
+                    <h2>Add Programmer</h2>
+                    <!-- Embed PHP form to add programmer -->
+                    <?php include 'addprogrammer.php'; ?>
+                </div>
+
+                <!-- View Programmers Content -->
+                <div id="viewprogrammer-container" class="page" style="display: none;">
+                    <h2>View Programmers</h2>
+                    <!-- Embed PHP to display programmers -->
+                    <?php include 'viewprogrammer.php'; ?>
+                </div>
+
+                <!-- Edit Programmer Content -->
+                <div id="editprogrammer-container" class="page" style="display: none;">
+                    <h2>Edit Programmer</h2>
+                    <!-- Embed PHP to edit a programmer -->
+                    <?php include 'editprogrammer.php'; ?>
+                </div>
+
+                <!-- Delete Programmer Content -->
+                <div id="deleteprogrammer-container" class="page" style="display: none;">
+                    <h2>Delete Programmer</h2>
+                    <!-- Embed PHP to delete a programmer -->
+                    <?php include 'deleteprogrammer.php'; ?>
+                </div>
+
+                <!-- Add Client Content -->
+                <div id="addclient-container" class="page" style="display: none;">
+                    <h2>Add Client</h2>
+                    <!-- Embed PHP form to add client -->
+                    <?php include 'clientform.php'; ?>
+                </div>
+
+                <!-- View Clients Content -->
+                <div id="viewclients-container" class="page" style="display: none;">
+                    <h2>View Clients</h2>
+                    <!-- Embed PHP to display clients -->
+                    <?php include 'display.php'; ?>
+                </div>
+
+                <!-- Upload Files Content -->
+                <div id="uploadfiles-container" class="page" style="display: none;">
+                    <h2>Upload Files</h2>
+                    <!-- Embed PHP for file upload -->
+                    <?php include 'files.php'; ?>
+                </div>
+
+                <!-- Manage Files Content -->
+                <div id="managefiles-container" class="page" style="display: none;">
+                    <h2>Manage Files</h2>
+                    <!-- Embed PHP for file management -->
+                    <?php include 'displayfiles.php'; ?>
+                </div>
             </div>
         </div>
     </div>
@@ -65,4 +153,8 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
+
+
+
 
