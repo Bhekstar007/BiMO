@@ -47,42 +47,42 @@
     </form>
 
     <script>
-        // JavaScript validation (Interaction Capability & Reliability)
+        //JavaScript validation
         document.getElementById('clientForm').addEventListener('submit', function(e) {
             let isValid = true;
 
-            // Clear previous errors
+            //Clear previous errors
             document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
 
-            // Name validation
+            //Name validation
             const name = document.getElementById('name').value;
             if (!/^[A-Za-z\s]+$/.test(name)) {
                 document.getElementById('nameError').textContent = "Please enter a valid name (letters and spaces only).";
                 isValid = false;
             }
 
-            // Email validation
+            //Email validation
             const email = document.getElementById('email').value;
             if (!/^\S+@\S+\.\S+$/.test(email)) {
                 document.getElementById('emailError').textContent = "Please enter a valid email address.";
                 isValid = false;
             }
 
-            // Phone validation
+            //Phone validation
             const phone = document.getElementById('phone').value;
             if (!/^\+60-?(11|12|13|14|15|16|17|18|19)-?\d{4}-?\d{4}$/.test(phone)) {
                 document.getElementById('phoneError').textContent = "Phone number must start with +60, followed by 2 digits for area code, and 8 digits for the number. Dashes are optional.";
                 isValid = false;
             }
 
-            // Project ID validation
+            //Project ID validation
             const projectId = document.getElementById('project_id').value;
             if (!/^PRO-\d{5}$/.test(projectId)) {
-                document.getElementById('projectIdError').textContent = "Project ID must follow the format PRO-12345.";
+                document.getElementById('projectIdError').textContent = "Project ID must follow the format PRO-XXXXX.";
                 isValid = false;
             }
 
-            // Prevent submission if invalid
+            //Prevent submission if invalid
             if (!isValid) {
                 e.preventDefault();
             }
