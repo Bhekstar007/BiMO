@@ -26,7 +26,7 @@ if (empty($_POST["id_number"])) {// Staff ID validation process
 <html lang="en">
 <head>
     <title>Add Programmer</title>
-    <link rel="stylesheet" href="userinterface/styles.css">
+    <link rel="stylesheet" href="phpstyles.css">
     <script src="userinterface/scripts.js"></script>
 </head>
 <body>

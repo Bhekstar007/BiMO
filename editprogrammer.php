@@ -65,7 +65,7 @@ $conn->close();
 <html lang="en">
 <head>
     <title>Edit Programmer</title>
-    <link rel="stylesheet" href="userinterface/styles.css">
+    <link rel="stylesheet" href="phpstyles.css">
     <script src="userinterface/scripts.js"></script>
 </head>
 <body>

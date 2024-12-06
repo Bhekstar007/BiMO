@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 <html lang="en">
 <head>
     <title>Manage Programmers</title>
-    <link rel="stylesheet" href="userinterface/styles.css">
+    <link rel="stylesheet" href="phpstyles.css">
     <script src="userinterface/scripts.js"></script>
 </head>
 <body>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BiMO Sprint #1 Prototype</title>
-    <link rel="stylesheet" href="userinterface/styles.css">
+    <link rel="stylesheet" href="phpstyles.css">
     <script src="userinterface/scripts.js"></script>
 </head>
 <body>
